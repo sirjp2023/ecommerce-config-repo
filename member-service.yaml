@@ -40,9 +40,9 @@ eureka:
     prefer-ip-address: true
 
 
-# 6. Actuator의 health 엔드포인트 활성화(Consul)
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: health, info
+# 6. Actuator의 health 엔드포인트 활성화
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh # 1. refresh 엔드포인트 노출
