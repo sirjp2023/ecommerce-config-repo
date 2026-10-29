@@ -1,0 +1,12 @@
+# Eureka 주소는 모든 환경에서 동일하다고 가정
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.internal:8761/eureka/
+
+# 모든 서비스에서 actuator 엔드포인트 노출 (refresh: 설정 갱신)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh
